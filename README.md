@@ -46,15 +46,10 @@ SSH
 Установка ssh - _sudo apt-get install ssh_
 
 Проверка запуска _systemctl status sshd_ (запущен ssh или нет) 
-
 Проверка порта: _cat /etc/ssh/sshd_config | grep ^Port_ 
-
 Перезагрузка ssh: _sudo systemctl restart ssh.service_ 
-
 Просмотр какие порты работают в OpenSSH _sudo ufw app info OpenSSH_
-
 Замена портов в OpenSSH - см. файл openssh-server в папке /etc/ufw/applications.d 
-
 После замены портов нужно произвести обновление - _sudo ufw app update OpenSSH_
 
 
