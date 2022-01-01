@@ -6,7 +6,7 @@
 Права пользователей
 sudo - ссылка с вики 
 1 Перейти на суперпользователя root: su -
-
+*******
 Sudoers 
 https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-ru
 
