@@ -46,3 +46,16 @@ https://gitlab.com/apparmor/apparmor/-/wikis/home
 
 ***** 
 SSH 
+Установка ssh - _sudo apt-get install ssh_
+Проверка запуска _systemctl status sshd_ (запущен ssh или нет)
+Проверка порта: _cat /etc/ssh/sshd_config | grep ^Port_
+Перезагрузка ssh: _sudo systemctl restart ssh.service_
+Просмотр какие порты работают в OpenSSH _sudo ufw app info OpenSSH_
+Замена портов в OpenSSH - см. файл openssh-server в папке /etc/ufw/applications.d 
+После замены портов нужно произвести обновление - _sudo ufw app update OpenSSH_
+
+
+Проброс портов - в дополнительных настройках VB прописываем что к чему (надо добавить порт 4242)
+<img width="951" alt="Screen Shot 2022-01-02 at 12 48 45 AM" src="https://user-images.githubusercontent.com/40731866/147860859-7d5812a0-5603-4020-8032-9801b7e9e1dc.png">
+NAT - https://wiki.merionet.ru/seti/13/nat-na-palcax-chto-eto/
+
