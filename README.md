@@ -15,9 +15,12 @@ Sudoers
 The default security policy is sudoers, which is configured via the file /private/etc/sudoers, or via LDAP.  See the Plugins section for more information.
 https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-ru
 Редактировать sudoers стоит только через visudo, т.к. это позволяет проверить синтаксис и корректность разрешений. 
-Можно настроить дефолтный редактор sudoers с помощью команды _sudo update-alternatives --config editor_
+Можно настроить дефолтный редактор sudoers с помощью команды _sudo update-alternatives --config editor_ 
 
 Ограничения использования sudo 
+- если через СУДО создать файлы или папки, или установить ПО, то текущий пользователь не получает права доступа к этим папкам, это может вести к конфликтам.
+- через СУДО не срабатывают некоторые ограничения команд и сервисов, в связи с чем они могут некорректно работать. 
+- у СУДО слишком много прав, поэтому можно случайно удалить систему или сделать что-то терминальное для вашей системы. 
 
 *******
 Правила для создания групп
@@ -51,7 +54,8 @@ SSH
 
 Перезагрузка ssh: _sudo systemctl restart ssh.service_ 
 
-Просмотр какие порты работают в OpenSSH _sudo ufw app info OpenSSH_
+Просмотр какие порты работают в OpenSSH _sudo ufw app info OpenSSH_  
+
 Замена портов в OpenSSH - см. файл openssh-server в папке /etc/ufw/applications.d 
 
 После замены портов нужно произвести обновление - _sudo ufw app update OpenSSH_
