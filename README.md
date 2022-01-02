@@ -64,4 +64,11 @@ SSH
 <img width="951" alt="Screen Shot 2022-01-02 at 12 48 45 AM" src="https://user-images.githubusercontent.com/40731866/147860859-7d5812a0-5603-4020-8032-9801b7e9e1dc.png">
 
 NAT - https://wiki.merionet.ru/seti/13/nat-na-palcax-chto-eto/
+******
+Как подключаться через SSH (примеры)
+ssh  ufitzhug@localhost -p 2223 (2223 - Host Port)
+ssh root@localhost -p 2223
 
+
+*******
+Установка критериев паролей на текущем пароле - _sudo chage -l ufitzhug_
